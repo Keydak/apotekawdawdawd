@@ -1,0 +1,29 @@
+package tugasbukupaket;
+
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+
+public class test {
+
+    public static void main(String[] args) throws IOException {
+        try {
+            FileOutputStream file = new FileOutputStream("D:/Data.txt");
+            BufferedWriter output = new BufferedWriter(new OutputStreamWriter(file));
+            String data = "BELAJAR";
+            output.write(data);
+            output.close();
+            file.close();
+
+            System.out.println("OK");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+}
